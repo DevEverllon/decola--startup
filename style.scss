@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none
+}
+
+// IMPORTAÇÕES DE ARQUIVOS
+@import "partials/color";
+@import "partials/header";
+@import "partials/home";
+@import "partials/carrossel";
+@import "partials/services";
+@import "partials/portifolio";
+
+
+// CONFIGURAÇÕES GERAIS
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Sora', sans-serif;
+
+    background-color: $black-dark;
+    color: $white-normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}

@@ -1,0 +1,159 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 20% 20px;
+    max-width: 1288px;
+
+    height: 100vh;
+
+}
+
+.shape {
+    background: linear-gradient(to right, #00e0ff, #006bf8, #00ff85);
+    background-repeat: repeat;
+    background-size: 200% auto;
+    animation: gradient-animation 5s infinite ease;
+
+    min-width: 34vw;
+    min-height: 34vw;
+
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    z-index: -1;
+    
+    border-radius: 50%;
+    display: none;
+}
+
+.infos-home {
+    h1 {
+        font-size: 22pt;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+
+        background: linear-gradient(45deg, $primary-color-one, $primary-color-two);
+        background-size: 400% 100%;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: gradientText 10s linear infinite alternate;
+    }
+
+    span {
+        font-weight: 500;
+    }
+
+    .description {
+        font-size: 11pt;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .description-text {
+        font-size: 12pt;
+        line-height: 1.5em;
+        color: #ababab;
+        text-align: justify;
+    }
+
+    button {
+        background-color: transparent;
+        color: $white-normal;
+        border: 2px solid $primary-color-one;
+        border-radius: 10px;
+        font-size: 12pt;
+
+        margin-top: 20px;
+        padding: 8px 20px;
+    }
+}
+
+.image-home {
+    text-align: center;
+    margin: 20px;
+
+    img {
+        width: 85%;
+    }
+
+    .image--descktop {
+        display: none;
+    }
+}
+
+// Mídias Responsivas
+@media screen and (min-width: 1320px) {
+    .home {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 880px) {
+    .home {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .shape{
+        display: block;
+        top: 30%;
+    }
+
+    .infos-home {
+        flex: 1;
+
+        h1 {
+            font-size: 35pt;
+        }
+
+        .description {
+            font-size: 15pt;
+        }
+
+        .description-text {
+            font-size: 12pt;
+            text-align: left;
+            width: 85%;
+        }
+    }
+
+    .image-home {
+        flex: 1;
+
+        .image--responsive {
+            display: none;
+        }
+
+        .image--descktop {
+            display: block;
+        }
+    }
+}
+
+// ANIMAÇÕES
+@keyframes gradientText {
+    0% {
+        background-position-x: 0%;
+    }
+
+    50% {
+        background-position: 200%;
+    }
+}
+
+@keyframes gradient-animation {
+    0%, 100% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+}
