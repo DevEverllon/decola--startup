@@ -46,25 +46,30 @@
     background-position: 100% 100%;
     cursor: pointer;
 }
+
 .swiper-slide:active {
     cursor: grab;
 }
 
 // IMAGENS: 3173 de altura
 .itemOne {
-    background-image: url('../asserts/portifolio/Captura\ de\ tela_3-4-2024_18490_.jpeg');
+    background-image: url('../asserts/portifolio/img-1.jpeg');
 }
 
 .itemTwo {
-    background-image: url('../asserts/portifolio/Captura\ de\ tela_3-4-2024_184925_.jpeg');
+    background-image: url('../asserts/portifolio/img-2.png');
 }
 
 .itemThree {
-    background-image: url('../asserts/portifolio/Captura\ de\ tela_3-4-2024_184937_.jpeg');
+    background-image: url('../asserts/portifolio/img-3.png');
 }
 
 .itemFour {
-    background-image: url('../asserts/portifolio/Captura\ de\ tela_3-4-2024_184937_.jpeg');
+    background-image: url('../asserts/portifolio/img-4.jpeg');
+}
+
+.itemFive{
+    background-image: url('../asserts/portifolio/img-5.jpeg');
 }
 
 
