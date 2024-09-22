@@ -425,6 +425,7 @@ header {
     width: 100%;
     box-shadow: 0px 50px 35px 5px #090d11;
     padding: 15px 20px 0px 20px;
+    text-align: center;
   }
   .content-services h2 {
     font-size: 22pt;
@@ -433,6 +434,7 @@ header {
   .content-services p {
     font-size: 10pt;
     text-align: left;
+    text-align: center;
   }
   .content-services button {
     display: none;
@@ -534,6 +536,179 @@ header {
 @media screen and (max-width: 1313px) {
   .portfolio h2 {
     font-size: 22pt;
+  }
+  .swiper-slide:hover {
+    transition: 10s;
+    background-position: 100% 100%;
+    cursor: pointer;
+  }
+  .swiper-slide:hover {
+    transition: 10s;
+    background-position: 100% 0%;
+    cursor: pointer;
+  }
+  .swiper-slide:active {
+    cursor: grab;
+  }
+}
+.planes {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 50px auto;
+  max-width: 1288px;
+}
+
+.content-planes {
+  width: 30%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 25px;
+}
+.content-planes h2 {
+  font-size: 32pt;
+  font-weight: 600;
+}
+.content-planes h2 span {
+  font-weight: 500;
+}
+.content-planes p {
+  font-size: 12pt;
+  line-height: 1.5em;
+  color: #ababab;
+  text-align: justify;
+}
+.content-planes button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 12pt;
+  border: 2px solid #00e0ff;
+  border-radius: 10px;
+  padding: 8px 20px;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+.content-planes button:hover {
+  box-shadow: 1px 1px 10px #00e0ff;
+  transform: scale(1.1);
+}
+
+.cards-planes {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.colum-two {
+  margin-top: 150px;
+}
+
+.card-planes {
+  background-color: transparent;
+  border: 2px solid #222222;
+  border-radius: 20px;
+  transition: 1s;
+  padding: 25px 15px;
+  width: 90%;
+}
+.card-planes img {
+  width: 30px;
+  margin-bottom: 10px;
+}
+.card-planes h3 {
+  margin-bottom: 10px;
+}
+.card-planes .txt-o {
+  color: #00e0ff;
+}
+.card-planes .txt-t {
+  color: #00ff85;
+}
+.card-planes p {
+  font-size: 10pt;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+.card-planes ul li {
+  font-size: 10pt;
+  list-style: circle;
+  margin-left: 15px;
+  line-height: 2em;
+}
+.card-planes ul li:hover {
+  list-style: disc;
+  color: #ababab;
+}
+.card-planes div {
+  width: 100%;
+  text-align: end;
+}
+.card-planes div button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #00e0ff;
+  border-radius: 50px;
+  padding: 8px 12px;
+  margin: 0px auto;
+  font-size: 10pt;
+}
+.card-planes div .tw-tt {
+  border: 2px solid #00ff85;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 10px #fff;
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 1313px) {
+  .planes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-planes {
+    background-color: #090d11;
+    margin-top: 1px;
+    width: 100%;
+    box-shadow: 0px 50px 35px 5px #090d11;
+    padding: 15px 20px 0px 20px;
+    text-align: center;
+  }
+  .content-planes h2 {
+    font-size: 22pt;
+    color: #00e0ff;
+  }
+  .content-planes p {
+    font-size: 10pt;
+    text-align: left;
+    text-align: center;
+  }
+  .content-planes button {
+    display: none;
+  }
+  .cards-planes {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .card {
+    width: 450px;
+    margin: 0px auto;
+  }
+  .colum-two {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 962px) {
+  .cards-planes {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
   }
 }
 body {

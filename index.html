@@ -108,7 +108,7 @@
 
         <!-- SEÇÃO DE SERVIÇOS -->
         <section id="services" class="services">
-            <div class="cards-services">
+            <div class="cards-planes">
                 <!-- COLUNA 1 -->
                 <div class="colum-one">
                     <!-- CARD 1 -->
@@ -247,7 +247,7 @@
 
             <!-- ============================================ -->
 
-            <div class="content-services">
+            <div class="content-planes">
                 <h2>Nossos <span>Serviços</span></h2>
 
                 <p>Especialista em criar soluções digitais personalizadas para impulsionar o sucesso do seu negócio.</p>
@@ -277,10 +277,105 @@
             </div>
         </section>
 
-        <!-- SEÇÃO DE PLANOS -->
-        <section id="plane" class="plane">
+        <!-- SEÇÃO PLANOS -->
+        <section id="plane" class="planes">
+            <div class="content-planes">
+                <h2>Nossos <span>Planos</span></h2>
 
+                <p>Especialista em criar soluções digitais personalizadas para impulsionar o sucesso do seu negócio.</p>
+
+                <button>Fale conosco</button>
+            </div>
+
+            <!-- ============= -->
+
+            <div class="cards-planes">
+                <!-- COLUNA 1 -->
+                <div class="colum-one">
+                    <!-- CARD 1 -->
+                    <div class="card-planes">
+                        <img src="asserts/icons/1.svg" alt="">
+
+                        <h3 class="txt-o">Plano Basic</h3>
+
+                        <p> Ideal para pequenas empresas que buscam uma presença digital inicial com um site simples e eficiente.</p>
+
+                        <ul>
+                            <li>Design responsivo</li>
+                            <li>Suporte técnico básico (até 5h por mês)</li>
+                            <li>Configuração de domínio e hospedagem</li>
+                            <li>Entrega rápida (até 20 dias úteis)</li>
+                        </ul>
+
+                        <div>
+                            <button>À partir de R$ 1.500/mês</button>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="card-planes">
+                        <img src="asserts/icons/2.svg" alt="">
+
+                        <h3 class="txt-t">Plano Professional</h3>
+
+                        <p>Perfeito para empresas que precisam de mais funcionalidades e de um site robusto com manutenção regular.</p>
+
+                        <ul>
+                            <li>Integração com CMS para gestão de conteúdo</li>
+                            <li>SEO básico e otimização de performance</li>
+                            <li>Suporte técnico especializado (até 10h por mês)</li>
+                            <li>Tempo de entrega: até 30 dias úteis</li>
+                        </ul>
+
+                        <div>
+                            <button class="tw-tt">À partir de R$ 2.500/mês</button>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="card-planes">
+                        <img src="asserts/icons/3.svg" alt="">
+
+                        <h3 class="txt-o">Plano Enterprise</h3>
+
+                        <p>Solução completa para empresas que precisam de software sob medida e gestão automatizada, além de alta escalabilidade.
+                        </p>
+
+                        <ul>
+                            <li>Desenvolvimento de software sob medida (CRM, ERP, etc.)</li>
+                            <li>Desenvolvimento de aplicativos móveis (Android e iOS)</li>
+                            <li>Suporte contínuo (monitoramento 24/7, atualizações regulares)</li>
+                            <li>Tempo de entrega: até 90 dias úteis</li>
+                        </ul>
+
+                        <div>
+                            <button>À partir de R$ 3.500/mês</button>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="card-planes">
+                        <img src="asserts/icons/4.svg" alt="">
+
+                        <h3 class="txt-t">E - commerce</h3>
+
+                        <p>Criação de plataformas de comércio eletrônico completas com integração de sistemas que
+                            permitem a venda de produtos e serviços pela internet.</p>
+
+                        <ul>
+                            <li>Personalização completa</li>
+                            <li>Integração com sistemas de pagamento e gestão</li>
+                            <li>SEO e marketing digital</li>
+                        </ul>
+
+                        <div>
+                            <button class="tw-tt">À partir de R$ 4.500/mês</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <script src="menu.js"></script>
@@ -288,6 +383,50 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>
+
+    <script>
+        // I will be creating a different pen with touch support but right // now I have no time for it due to school
+
+        const slider = document.querySelector(".items");
+        const slides = document.querySelectorAll(".item");
+        const button = document.querySelectorAll(".button");
+
+        let current = 0;
+        let prev = 4;
+        let next = 1;
+
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+        }
+
+        const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+        const gotoNext = () => current < 4 ? gotoNum(current + 1) : gotoNum(0);
+
+        const gotoNum = number => {
+            current = number;
+            prev = current - 1;
+            next = current + 1;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                slides[i].classList.remove("prev");
+                slides[i].classList.remove("next");
+            }
+
+            if (next == 5) {
+                next = 0;
+            }
+
+            if (prev == -1) {
+                prev = 4;
+            }
+
+            slides[current].classList.add("active");
+            slides[prev].classList.add("prev");
+            slides[next].classList.add("next");
+        }
+    </script>
 
 </body>
 
