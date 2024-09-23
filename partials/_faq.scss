@@ -1,0 +1,48 @@
+.faq {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-conteiner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    button {
+        background-color: transparent;
+        border: 1px solid $primary-color-one;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        span,
+        i {
+            color: #fff;
+            font-size: 13pt;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+    }
+
+    .accordion-body {
+        border-left: 1px solid $primary-color-one;
+        border-right: 1px solid $primary-color-one;
+        border-bottom: 1px solid $primary-color-one;
+        // display: none;
+
+        p {
+            font-size: 11pt;
+            padding: 10px 15px;
+
+        }
+    }
+}
+
+.active{
+    display: flex;
+    background-color: red;
+}
