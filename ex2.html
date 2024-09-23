@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Custom Carousel Clone with Multiple Slides</title>
+
+    <style>
+
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 33.33%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #c42828;
+            font-size: 24px;
+            color: #333;
+            margin: 0 15px;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pagination-dot.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">Slide 1</div>
+            <div class="carousel-slide">Slide 2</div>
+            <div class="carousel-slide">Slide 3</div>
+            <div class="carousel-slide">Slide 4</div>
+            <div class="carousel-slide">Slide 5</div>
+            <div class="carousel-slide">Slide 6</div>
+            <div class="carousel-slide">Slide 7</div>
+            <div class="carousel-slide">Slide 8</div>
+            <div class="carousel-slide">Slide 9</div>
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+    </div>
+
+    <div class="pagination">
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+        <div class="pagination-dot"></div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.carousel-wrapper');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const paginationDots = document.querySelectorAll('.pagination-dot');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        const slidesPerView = 3;
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let isDragging = false;
+        let startPos = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+
+        function updateCarousel() {
+            const offset = currentIndex * (100 / slidesPerView);
+            wrapper.style.transform = `translateX(-${offset}%)`;
+
+            paginationDots.forEach(dot => dot.classList.remove('active'));
+            paginationDots[Math.floor(currentIndex / slidesPerView)].classList.add('active');
+        }
+
+        paginationDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index * slidesPerView;
+                updateCarousel();
+            });
+        });
+
+        wrapper.addEventListener('mousedown', dragStart);
+        wrapper.addEventListener('touchstart', dragStart);
+        wrapper.addEventListener('mouseup', dragEnd);
+        wrapper.addEventListener('mouseleave', dragEnd);
+        wrapper.addEventListener('touchend', dragEnd);
+        wrapper.addEventListener('mousemove', dragMove);
+        wrapper.addEventListener('touchmove', dragMove);
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        function dragStart(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            wrapper.classList.add('grabbing');
+        }
+
+        function dragMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+                wrapper.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+
+        function dragEnd() {
+            isDragging = false;
+            wrapper.classList.remove('grabbing');
+
+            const movedBy = currentTranslate - prevTranslate;
+            if (movedBy < -100 && currentIndex < totalSlides - slidesPerView) {
+                currentIndex++;
+            } else if (movedBy > 100 && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            setPositionByIndex();
+        }
+
+        function setPositionByIndex() {
+            currentTranslate = currentIndex * (-window.innerWidth / slidesPerView);
+            prevTranslate = currentTranslate;
+            updateCarousel();
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < totalSlides - slidesPerView) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalSlides - slidesPerView;
+            }
+            updateCarousel();
+        });
+
+        updateCarousel();
+
+        // const wrapper = document.querySelector('.carousel-wrapper');
+        // const slides = document.querySelectorAll('.carousel-slide');
+        // const paginationDots = document.querySelectorAll('.pagination-dot');
+
+        // const slidesPerView = 3;
+        // const totalSlides = slides.length;
+        // let currentIndex = 0;
+        // let isDragging = false;
+        // let startPos = 0;
+        // let currentTranslate = 0;
+        // let prevTranslate = 0;
+        let animationID;
+
+        // Função otimizada de drag (movimento ao arrastar)
+        function dragStart(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            wrapper.classList.add('grabbing');
+            animationID = requestAnimationFrame(animation); // Anima o movimento enquanto o mouse está sendo arrastado
+        }
+
+        function dragMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+
+                // Limita o arraste ao início e fim dos slides
+                const maxTranslate = -(totalSlides - slidesPerView) * (window.innerWidth / slidesPerView);
+                currentTranslate = Math.max(Math.min(currentTranslate, 0), maxTranslate);
+            }
+        }
+
+        function dragEnd() {
+            isDragging = false;
+            cancelAnimationFrame(animationID); // Cancela a animação ao soltar o mouse
+            wrapper.classList.remove('grabbing');
+
+            // Verifica o quanto o usuário arrastou para mudar de slide (se for suficiente, muda de slide)
+            const movedBy = currentTranslate - prevTranslate;
+
+            const slideWidth = window.innerWidth / slidesPerView;
+            if (movedBy < -slideWidth / 4 && currentIndex < totalSlides - slidesPerView) {
+                currentIndex++;
+            } else if (movedBy > slideWidth / 4 && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            setPositionByIndex(); // Atualiza a posição do slide
+        }
+
+        function setPositionByIndex() {
+            currentTranslate = currentIndex * -(window.innerWidth / slidesPerView);
+            prevTranslate = currentTranslate;
+            wrapper.style.transition = 'transform 0.3s ease'; // Transição mais suave ao soltar o mouse
+            wrapper.style.transform = `translateX(${currentTranslate}px)`;
+
+            updatePagination();
+        }
+
+        function animation() {
+            if (isDragging) {
+                wrapper.style.transform = `translateX(${currentTranslate}px)`;
+                requestAnimationFrame(animation); // Continua animando enquanto arrasta
+            }
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        function updatePagination() {
+            paginationDots.forEach(dot => dot.classList.remove('active'));
+            paginationDots[Math.floor(currentIndex / slidesPerView)].classList.add('active');
+        }
+
+        // Eventos de mouse e touch para arrastar
+        wrapper.addEventListener('mousedown', dragStart);
+        wrapper.addEventListener('touchstart', dragStart);
+
+        wrapper.addEventListener('mousemove', dragMove);
+        wrapper.addEventListener('touchmove', dragMove);
+
+        wrapper.addEventListener('mouseup', dragEnd);
+        wrapper.addEventListener('mouseleave', dragEnd);
+        wrapper.addEventListener('touchend', dragEnd);
+
+        updatePagination(); // Atualiza o estado inicial da paginação
+    </script>
+</body>
+
+</html>
