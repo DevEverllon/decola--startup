@@ -460,6 +460,92 @@ header {
     width: 90%;
   }
 }
+.portfolio {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.portfolio h2 {
+  font-size: 32pt;
+  font-weight: 600;
+  margin: 25px 0px;
+  text-align: center;
+  color: #00e0ff;
+}
+.portfolio h2 span {
+  font-weight: 500;
+}
+
+.swiper {
+  width: 90%;
+  height: 80%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Para garantir que a imagem não saia do contêiner */
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Faz a imagem se ajustar ao contêiner de forma similar ao background-size: cover */
+  -o-object-position: 0 0;
+     object-position: 0 0; /* Faz a imagem se comportar como background-position: center */
+  transition: 2s;
+}
+
+.swiper-slide img:hover {
+  -o-object-position: bottom;
+     object-position: bottom; /* Faz a imagem se comportar como background-position: center */
+}
+
+.swiper-slide:hover {
+  transition: 10s;
+  background-position: 100% 100%;
+  cursor: pointer;
+}
+
+.swiper-slide:active {
+  cursor: grab;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1313px) {
+  .portfolio h2 {
+    font-size: 22pt;
+  }
+  .swiper-slide:hover {
+    transition: 10s;
+    background-position: 100% 100%;
+    cursor: pointer;
+  }
+  .swiper-slide:hover {
+    transition: 10s;
+    background-position: 100% 0%;
+    cursor: pointer;
+  }
+  .swiper-slide:active {
+    cursor: grab;
+  }
+}
 .planes {
   display: flex;
   flex-direction: row;
@@ -620,106 +706,6 @@ header {
     width: 90%;
   }
 }
-.carousel-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-wrapper {
-  display: flex;
-  gap: 15px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-  flex: 0 0 33.33%;
-  width: 100%;
-  height: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../asserts/portifolio/img-1.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.carousel-slide:hover {
-  transition: 10s;
-  background-position: 100% 100%;
-  cursor: pointer;
-}
-
-.carousel-slide:active {
-  cursor: grab;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50px;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.pagination-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.pagination-dot.active {
-  background-color: #0080ff;
-}
-
-.itemOne {
-  background-image: url("../asserts/img-1.jpeg");
-  width: 100%;
-  height: 100%;
-}
-
-.itemTwo {
-  background-image: url("../asserts/img-2.png");
-}
-
-.itemThree {
-  background-image: url("../asserts/portifolio/img-3.png");
-}
-
-.itemFour {
-  background-image: url("../asserts/portifolio/img-4.jpeg");
-}
-
-.itemFive {
-  background-image: url("../asserts/portifolio/img-5.jpeg");
-}
-
 body {
   width: 100%;
   height: 100vh;
