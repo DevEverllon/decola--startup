@@ -116,7 +116,7 @@
         }
     }
 
-    div{
+    div {
         width: 100%;
         text-align: end;
 
@@ -128,9 +128,10 @@
             padding: 8px 12px;
             margin: 0px auto;
             font-size: 10pt;
-            
+
         }
-        .tw-tt{
+
+        .tw-tt {
             border: 2px solid $primary-color-two;
         }
     }
@@ -181,8 +182,8 @@
         margin: 0px auto;
     }
 
-    .colum-two {
-        margin: 0px;
+    .colum-one {
+        align-items: center;
     }
 }
 

@@ -35,53 +35,28 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden; /* Para garantir que a imagem não saia do contêiner */
+    overflow: hidden;
+    /* Para garantir que a imagem não saia do contêiner */
 }
 
 .swiper-slide img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Faz a imagem se ajustar ao contêiner de forma similar ao background-size: cover */
-    object-position: 0 0; /* Faz a imagem se comportar como background-position: center */
+    object-fit: cover;
+    /* Faz a imagem se ajustar ao contêiner de forma similar ao background-size: cover */
+    object-position: 0 0;
+    /* Faz a imagem se comportar como background-position: center */
     transition: 3s;
 }
 
 .swiper-slide img:hover {
-    object-position: bottom; /* Faz a imagem se comportar como background-position: center */
-}
-
-
-.swiper-slide:hover {
-    transition: 10s;
-    background-position: 100% 100%;
-    cursor: pointer;
+    object-position: bottom;
+    /* Faz a imagem se comportar como background-position: center */
 }
 
 .swiper-slide:active {
     cursor: grab;
 }
-
-// IMAGENS: 3173 de altura
-// .itemOne {
-//     background-image: url('../asserts/portifolio/img-1.jpeg');
-// }
-
-// .itemTwo {
-//     background-image: url('../asserts/portifolio/img-2.png');
-// }
-
-// .itemThree {
-//     background-image: url('../asserts/portifolio/img-3.png');
-// }
-
-// .itemFour {
-//     background-image: url('../asserts/portifolio/img-4.jpeg');
-// }
-
-// .itemFive {
-//     background-image: url('../asserts/portifolio/img-5.jpeg');
-// }
-
 
 .swiper-slide img {
     display: block;
@@ -90,26 +65,11 @@
     object-fit: cover;
 }
 
-
+// Mídias Responsivas
 @media screen and (max-width: 1313px) {
     .portfolio {
         h2 {
             font-size: 22pt;
         }
-    }
-
-    .swiper-slide:hover {
-        transition: 10s;
-        background-position: 100% 100%;
-        cursor: pointer;
-    }
-
-    .swiper-slide:hover {
-        transition: 10s;
-        background-position: 100% 0%;
-        cursor: pointer;
-    }
-    .swiper-slide:active {
-        cursor: grab;
     }
 }

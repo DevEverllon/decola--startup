@@ -492,28 +492,26 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Para garantir que a imagem não saia do contêiner */
+  overflow: hidden;
+  /* Para garantir que a imagem não saia do contêiner */
 }
 
 .swiper-slide img {
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Faz a imagem se ajustar ao contêiner de forma similar ao background-size: cover */
+     object-fit: cover;
+  /* Faz a imagem se ajustar ao contêiner de forma similar ao background-size: cover */
   -o-object-position: 0 0;
-     object-position: 0 0; /* Faz a imagem se comportar como background-position: center */
+     object-position: 0 0;
+  /* Faz a imagem se comportar como background-position: center */
   transition: 3s;
 }
 
 .swiper-slide img:hover {
   -o-object-position: bottom;
-     object-position: bottom; /* Faz a imagem se comportar como background-position: center */
-}
-
-.swiper-slide:hover {
-  transition: 10s;
-  background-position: 100% 100%;
-  cursor: pointer;
+     object-position: bottom;
+  /* Faz a imagem se comportar como background-position: center */
 }
 
 .swiper-slide:active {
@@ -531,19 +529,6 @@ header {
 @media screen and (max-width: 1313px) {
   .portfolio h2 {
     font-size: 22pt;
-  }
-  .swiper-slide:hover {
-    transition: 10s;
-    background-position: 100% 100%;
-    cursor: pointer;
-  }
-  .swiper-slide:hover {
-    transition: 10s;
-    background-position: 100% 0%;
-    cursor: pointer;
-  }
-  .swiper-slide:active {
-    cursor: grab;
   }
 }
 .planes {
@@ -693,8 +678,8 @@ header {
     width: 450px;
     margin: 0px auto;
   }
-  .colum-two {
-    margin: 0px;
+  .colum-one {
+    align-items: center;
   }
 }
 @media screen and (max-width: 962px) {
