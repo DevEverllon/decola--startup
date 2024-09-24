@@ -24,13 +24,13 @@ header {
 }
 
 .cart-menu {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.237);
   width: 100%;
   height: 100%;
   position: fixed;
   top: -80px;
   left: 0px;
-  z-index: 1;
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +121,9 @@ header {
   }
   .menu-mobile {
     display: none;
+  }
+  .cart-menu {
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 880px) {
@@ -581,10 +584,7 @@ header {
   align-items: start;
   justify-content: center;
   gap: 20px;
-}
-
-.colum-two {
-  margin-top: 150px;
+  width: 80%;
 }
 
 .card-planes {
@@ -593,7 +593,7 @@ header {
   border-radius: 20px;
   transition: 1s;
   padding: 25px 15px;
-  width: 90%;
+  width: 100%;
 }
 .card-planes img {
   width: 30px;
@@ -633,7 +633,7 @@ header {
   border: 2px solid #00e0ff;
   border-radius: 50px;
   padding: 8px 12px;
-  margin: 0px auto;
+  margin: 10px auto;
   font-size: 10pt;
 }
 .card-planes div .tw-tt {
@@ -692,48 +692,98 @@ header {
   }
 }
 .faq {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  flex-flow: column;
   align-items: center;
+}
+.faq h2 {
+  font-size: 22pt;
+  color: #00e0ff;
+  margin: 35px 0px;
 }
 
 .accordion-conteiner {
+  max-width: 850px;
+  width: 85%;
+  margin: 10px 8px;
+}
+
+.accordion {
+  border: 2px solid #222222;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.accordion-header {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
-  width: 90%;
-}
-.accordion-conteiner button {
-  background-color: transparent;
-  border: 1px solid #00e0ff;
-  width: 100%;
-  display: flex;
   justify-content: space-between;
-}
-.accordion-conteiner button span,
-.accordion-conteiner button i {
+  width: 100%;
+  border: none;
+  background-color: transparent;
   color: #fff;
-  font-size: 13pt;
+  font-size: 15pt;
   font-weight: 600;
-  padding: 10px 15px;
 }
-.accordion-conteiner .accordion-body {
-  border-left: 1px solid #00e0ff;
-  border-right: 1px solid #00e0ff;
-  border-bottom: 1px solid #00e0ff;
-}
-.accordion-conteiner .accordion-body p {
-  font-size: 11pt;
-  padding: 10px 15px;
+.accordion-header span {
+  color: #00ff85;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.active {
-  display: flex;
-  background-color: red;
+.accordion-header.active span {
+  text-overflow: clip;
+  overflow: visible;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.5em;
 }
 
+.accordion-body {
+  color: #fff;
+  font-size: 12pt;
+  text-align: justify;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s;
+}
+.accordion-body p {
+  line-height: 1.5em;
+}
+
+.accordion-body.active {
+  padding: 12px;
+  height: 100%;
+  opacity: 1;
+}
+
+.arrow {
+  transition: transform 0.2s linear;
+}
+
+.accordion:has(.active) .arrow {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 500px) {
+  .faq h2 {
+    font-size: 22pt;
+    text-align: center;
+  }
+  .faq .accordion-header span {
+    font-size: 11.5pt;
+  }
+  .faq .accordion-body p {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+}
 body {
   width: 100%;
   height: 100vh;

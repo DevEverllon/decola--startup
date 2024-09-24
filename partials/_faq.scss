@@ -1,48 +1,111 @@
 .faq {
+    width: 100%;
+    height: 100vh;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: column;
     align-items: center;
+
+    h2 {
+        font-size: 22pt;
+        color: $primary-color-one;
+        margin: 35px 0px;
+    }
 }
 
 .accordion-conteiner {
+    max-width: 850px;
+    width: 85%;
+    margin: 10px 8px;
+
+}
+
+.accordion {
+    border: 2px solid $black-normal;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.accordion-header {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
 
-    button {
-        background-color: transparent;
-        border: 1px solid $primary-color-one;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    color: #fff;
 
-        span,
-        i {
-            color: #fff;
-            font-size: 13pt;
-            font-weight: 600;
-            padding: 10px 15px;
-        }
+    font-size: 15pt;
+    font-weight: 600;
+
+    span {
+        color: $primary-color-two;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-
-    .accordion-body {
-        border-left: 1px solid $primary-color-one;
-        border-right: 1px solid $primary-color-one;
-        border-bottom: 1px solid $primary-color-one;
-        // display: none;
-
-        p {
-            font-size: 11pt;
-            padding: 10px 15px;
-
-        }
+}
+.accordion-header.active{
+    span{
+        text-overflow: clip;
+        overflow: visible;
+        white-space: normal;
+        text-align: left;
+        line-height: 1.5em;
+        
     }
 }
 
-.active{
-    display: flex;
-    background-color: red;
+.accordion-body {
+    color: #fff;
+    font-size: 12pt;
+    text-align: justify;
+
+    // ATENÇÃO
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .3s;
+
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.accordion-body.active {
+    padding: 12px;
+    height: 100%;
+    opacity: 1;
+}
+
+.arrow {
+    transition: transform .2s linear;
+}
+
+// ANIMAÇÃO PARA A SETA GIRAR
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 500px) {
+    .faq {
+        h2 {
+            font-size: 22pt;
+            text-align: center;
+        }
+
+        .accordion-header {
+            span {
+                font-size: 11.5pt;
+            }
+        }
+        .accordion-body{
+            p{
+                text-align: left;
+                font-size: .9rem;
+            }
+        }
+    }
 }

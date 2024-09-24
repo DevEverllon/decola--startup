@@ -18,14 +18,14 @@ header {
 
 // OPTIONS
 .cart-menu {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.237);
     width: 100%;
     height: 100%;
 
     position: fixed;
     top: -80px;
     left: 0px;
-    z-index: 1;
+    z-index: 99;
 
     display: flex;
     align-items: center;
@@ -146,6 +146,11 @@ header {
     // MENU HAMBURGUER
     .menu-mobile {
         display: none;
+    }
+
+    .cart-menu{
+        background-color: transparent;
+
     }
 }
 
