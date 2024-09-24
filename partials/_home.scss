@@ -24,7 +24,7 @@
     top: 20%;
     right: 15%;
     z-index: -1;
-    
+
     border-radius: 50%;
     display: none;
 }
@@ -101,7 +101,7 @@
         align-items: center;
     }
 
-    .shape{
+    .shape {
         display: block;
         top: 30%;
     }
@@ -137,6 +137,14 @@
     }
 }
 
+@media screen and (max-width: 1318px) {
+    .home {
+        margin: 0% 20px;
+        height: 130vh;
+        
+    }
+}
+
 // ANIMAÇÕES
 @keyframes gradientText {
     0% {
@@ -149,7 +157,9 @@
 }
 
 @keyframes gradient-animation {
-    0%, 100% {
+
+    0%,
+    100% {
         background-position: 100% 50%;
     }
 
