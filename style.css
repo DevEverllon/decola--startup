@@ -784,6 +784,74 @@ header {
     font-size: 0.9rem;
   }
 }
+.Contacts {
+  width: 100%;
+  height: 100vh;
+  background-color: #222222;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.Contacts h2 {
+  font: 22pt;
+  text-align: center;
+  margin: 15px 0px;
+}
+.Contacts p {
+  color: #00e0ff;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 1.5em;
+  max-width: 650px;
+  margin: 15px 0px;
+}
+.Contacts .content-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 15px 0px;
+}
+.Contacts .content-contact button {
+  background-color: #00ff85;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 200px;
+}
+.Contacts .content-contact button p,
+.Contacts .content-contact button i {
+  color: #222;
+  font-weight: 700;
+  font-size: 12pt;
+}
+.Contacts .content-contact button:active {
+  opacity: 0.9;
+}
+.Contacts .contact-social {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 20px;
+}
+.Contacts .contact-social p,
+.Contacts .contact-social i {
+  font-weight: 700;
+  font-size: 12pt;
+  color: #fff;
+}
+.Contacts .contact-social i {
+  cursor: pointer;
+}
+.Contacts .contact-social i:active {
+  opacity: 0.9;
+}
+
 body {
   width: 100%;
   height: 100vh;
