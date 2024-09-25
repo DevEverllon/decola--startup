@@ -890,6 +890,86 @@ header {
   /* Cor ao passar o mouse */
 }
 
+.mission {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  background-image: url("../asserts/1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 15px;
+  margin: 20px 0px;
+  border-radius: 50px;
+  margin: 50px auto;
+  max-width: 1288px;
+  width: 100%;
+}
+.mission .info-mission {
+  width: 30%;
+}
+.mission .info-mission h2 {
+  color: #00ff85;
+}
+.mission .info-mission p {
+  font-size: 0.7em;
+}
+
+.cards-mission {
+  display: flex;
+  gap: 5%;
+  text-align: center;
+  width: 60%;
+}
+.cards-mission h3 {
+  font-size: 1em;
+  text-align: center;
+}
+.cards-mission p {
+  font-size: 0.7em;
+}
+
+@media screen and (max-width: 1312px) {
+  .mission {
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+  }
+  .mission .info-mission {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-mission {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mission {
+    text-align: center;
+    background-attachment: scroll;
+  }
+  .info-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-mission p {
+    width: 85%;
+  }
+  .cards-mission {
+    flex-direction: column;
+  }
+  .cards-mission p {
+    width: 85%;
+  }
+  .card-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 body {
   width: 100%;
   height: 100vh;
