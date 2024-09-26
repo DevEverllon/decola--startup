@@ -1044,6 +1044,11 @@ footer {
   justify-content: center;
   margin-top: 25px;
 }
+.footer-culum2 .footer-form .card-form .politc div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .footer-culum2 .footer-form .card-form .politc input {
   width: 10%;
   margin: 0px;
