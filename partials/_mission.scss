@@ -73,8 +73,6 @@
         background-color: $black-normal;
         border-radius: 0px;
         margin-top: 80px;
-
-
     }
 
     .info-mission {
@@ -84,7 +82,6 @@
 
         p {
             width: 85%;
-
         }
     }
 
@@ -92,7 +89,7 @@
         flex-direction: column;
 
         p {
-            width: 85%;
+            max-width: 500px;
         }
     }
 

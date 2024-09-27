@@ -275,31 +275,31 @@
                 <div class="card-mission">
                     <img src="asserts/mission/1.png" alt="">
 
-                    <h3>Soluções <br> Online</h3>
+                    <h3>Plataformas <br> Online</h3>
 
-                    <p>Criamos sistemas web que otimizam processos, aumentam a eficiência e elevam sua operação. Focamos
-                        em inovação e desempenho para garantir uma presença digital moderna e funcional, maximizando
-                        seus resultados.</p>
+                    <p>Criamos plataformas digitais inovadoras com interfaces intuitivas e envolventes, que oferecem
+                        experiências excepcionais aos usuários e ajudam a destacar sua marca no ambiente digital.</p>
                 </div>
 
                 <!-- CARD 2 -->
                 <div class="card-mission">
                     <img src="asserts/mission/2.png" alt="">
 
-                    <h3>Plataformas <br> Digitais</h3>
+                    <h3>Soluções <br> Digitais</h3>
 
-                    <p>Somos especialistas em plataformas digitais inovadoras, criando experiências de usuário
-                        intuitivas e envolventes que fazem seu negócio se destacar no digital.</p>
+                    <p>Desenvolvemos sistemas web personalizados que otimizam processos internos e aumentam a eficiência
+                        operacional, ajudando a modernizar e automatizar o seu negócio.</p>
                 </div>
 
                 <!-- CARD 3 -->
                 <div class="card-mission">
                     <img src="asserts/mission/1.png" alt="">
 
-                    <h3>App’s <br> Mobile</h3>
+                    <h3>Apps <br> Mobile</h3>
 
-                    <p>Na Decola Startup, desenvolvemos aplicativos personalizados para Android e iOS, focados em
-                        desempenho e experiência do usuário, conectando sua marca diretamente aos clientes.</p>
+                    <p>Projetamos e desenvolvemos aplicativos personalizados para Android e iOS, com foco em desempenho
+                        e experiência do usuário, conectando sua marca diretamente aos clientes e ampliando sua presença
+                        digital.</p>
                 </div>
             </div>
         </section>
@@ -602,7 +602,12 @@
 
         <!-- Botão Flutuante -->
         <button id="btnTop" title="Ir ao topo">
-            <i class="bi bi-arrow-up-circle"></i>
+            <img src="asserts/buttons/chevron-up.svg" alt="">
+        </button>
+
+        <!-- Botão WhatsApp -->
+        <button class="btnWhatsApp" title="Ir para o WhatsApp">
+            <img src="asserts/buttons/whatsapp.svg" alt="">
         </button>
     </main>
 
@@ -634,7 +639,7 @@
                 <a href="#">Cookies</a>
                 <a href="#">Documentação</a>
             </div>
-            
+
             <div class="footer-card">
                 <span>Contatos</span>
                 <a href="#">decolastartup@suporte.com.br</a>
@@ -646,23 +651,25 @@
             <div class="footer-form">
                 <span>Envie sua dúvida</span>
 
-                <div class="card-form">
-                    <label for="email">Email</label>
+                <form action="#" method="post">
+                    <fieldset class="card-form">
+                        <legend>Formulário de Contato</legend>
 
-                    <br>
+                        <label for="email">Email</label>
 
-                    <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
+                        <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
 
-                    <div class="politc">
-                        <div>
+                        <div class="politic">
                             <input type="checkbox" name="politic" id="politic" required>
-                            <p>Li e aceito os termos de política de privacidade</p>
+
+                            <label for="politic">Li e aceito os <a href="#">termos de política de privacidade</a></label>
                         </div>
 
-                        <button>Enviar</button>
-                    </div>
-                </div>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
             </div>
+
         </div>
 
         <div class="footer-culum3">
