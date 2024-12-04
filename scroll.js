@@ -1,12 +1,5 @@
 // ANIMAÇÃO DE SCROLL
 
-// Menu
-ScrollReveal().reveal('header', {
-    origin: 'top',
-    duration: 1000,
-    distance: '60%',
-});
-
 // Animação Informações Header
 ScrollReveal().reveal('.infos-home', {
     origin: 'left',
