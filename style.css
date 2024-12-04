@@ -539,6 +539,11 @@ header {
   .portfolio h2 {
     font-size: 22pt;
   }
+  .swiper-slide img:hover {
+    -o-object-position: top;
+       object-position: top;
+    /* Faz a imagem se comportar como background-position: center */
+  }
 }
 .planes {
   display: flex;
@@ -885,84 +890,77 @@ header {
   box-shadow: 0px 0px 12px #00e0ff;
 }
 
-.mission {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 5%;
-  background-color: #222;
-  padding: 15px;
-  margin: 20px 0px;
-  border-radius: 50px;
-  margin: 80px auto;
-  max-width: 1288px;
-  width: 100%;
-}
 .mission .info-mission {
-  width: 30%;
-}
-.mission .info-mission h2 {
-  color: #00ff85;
+  text-align: center;
+  padding: 50px;
 }
 .mission .info-mission p {
   font-size: 0.7em;
 }
-
-.cards-mission {
+.mission .cards-mission {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   gap: 5%;
-  text-align: center;
-  width: 60%;
+  padding: 15px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1288px;
 }
-.cards-mission h3 {
+.mission .card-mission {
+  background-color: #222;
+  border-radius: 25px;
+  padding: 15px;
+  width: 500px;
+  height: 450px;
+  text-align: center;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #5b5b5b solid 1px;
+}
+.mission .card-mission img {
+  width: 50%;
+  margin: auto;
+}
+.mission .card-mission h3 {
   font-size: 1em;
   text-align: center;
 }
-.cards-mission p {
+.mission .card-mission p {
   font-size: 0.7em;
 }
-
-@media screen and (max-width: 1312px) {
-  .mission {
-    flex-direction: column;
-    max-width: 800px;
-    width: 100%;
-  }
-  .mission .info-mission {
-    width: 100%;
-    text-align: center;
-  }
-  .cards-mission {
-    width: 100%;
-  }
+.mission .card-mission:hover {
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2784313725);
+  transform: scale(1.1);
 }
-@media screen and (max-width: 800px) {
-  .mission {
-    text-align: center;
-    background-image: none;
-    background-color: #222222;
-    border-radius: 0px;
-    margin-top: 80px;
-  }
-  .info-mission {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .info-mission p {
-    width: 85%;
-  }
+
+@media screen and (max-width: 668px) {
   .cards-mission {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
-  .cards-mission p {
-    max-width: 500px;
-  }
-  .card-mission {
+  .cards-mission .card-mission {
+    height: 200px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 25px;
+    border: #5b5b5b solid 1px;
+  }
+  .cards-mission .card-mission img {
+    width: 80px;
+  }
+  .cards-mission .card-mission h3,
+  .cards-mission .card-mission p {
+    text-align: left;
+  }
+  .cards-mission .card-mission:hover {
+    transform: scale(1);
   }
 }
 footer {
@@ -1145,6 +1143,74 @@ footer {
 
 .btnWhatsApp:hover {
   opacity: 0.8;
+}
+
+.cookies-msg {
+  width: 95%;
+  background-color: #fff;
+  color: #222;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px;
+  z-index: 100;
+  border-radius: 25px;
+  display: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.cookies-msg.show {
+  display: block;
+}
+.cookies-msg .cookies-title {
+  font-size: 1.3rem;
+  color: #00e0ff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
+}
+.cookies-msg .cookies-txt {
+  font-size: 0.9rem;
+}
+.cookies-msg .cookies-btn {
+  border: 0;
+  background-color: #00ff85;
+  padding: 8px 12px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #222222;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.cookies-msg .cookies-btn:hover {
+  transform: scale(0.9);
+  background-color: #00cc6a;
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Estiliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Estiliza o "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+/* Efeito hover no polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #00ff85, #00e0ff); /* Tom mais escuro no hover */
+}
+
+/* Efeito ativo (ao clicar e segurar) */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(45deg, #00e0ff, #00ff85);
 }
 
 html {

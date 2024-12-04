@@ -1,101 +1,182 @@
+// .mission {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 5%;
+
+//   // background-image: url('../asserts/1.png');
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   // background-attachment: fixed;
+//   background-color: #222;
+//   padding: 15px;
+//   margin: 20px 0px;
+//   border-radius: 50px;
+
+//   margin: 80px auto;
+//   max-width: 1288px;
+//   width: 100%;
+
+//   .info-mission {
+//     width: 30%;
+
+//     h2 {
+//       color: $primary-color-two;
+//     }
+
+//     p {
+//       font-size: 0.7em;
+//     }
+//   }
+// }
+
+// .cards-mission {
+//   display: flex;
+//   gap: 5%;
+//   text-align: center;
+
+//   width: 60%;
+
+//   h3 {
+//     font-size: 1em;
+//     text-align: center;
+//   }
+
+//   p {
+//     font-size: 0.7em;
+//   }
+// }
+
+// @media screen and (max-width: 1312px) {
+//   .mission {
+//     flex-direction: column;
+//     max-width: 800px;
+//     width: 100%;
+
+//     .info-mission {
+//       width: 100%;
+//       text-align: center;
+//     }
+//   }
+
+//   .cards-mission {
+//     width: 100%;
+//   }
+// }
+
+// @media screen and (max-width: 800px) {
+//   .mission {
+//     text-align: center;
+//     background-image: none;
+//     background-color: $black-normal;
+//     border-radius: 0px;
+//     margin-top: 80px;
+//   }
+
+//   .info-mission {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     p {
+//       width: 85%;
+//     }
+//   }
+
+//   .cards-mission {
+//     flex-direction: column;
+
+//     p {
+//       max-width: 500px;
+//     }
+//   }
+
+//   .card-mission {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }
 .mission {
+  .info-mission {
+    text-align: center;
+    padding: 50px;
+    p {
+      font-size: 0.7em;
+    }
+  }
+  .cards-mission {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     gap: 5%;
-
-    // background-image: url('../asserts/1.png');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    background-color: #222;
     padding: 15px;
-    margin: 20px 0px;
-    border-radius: 50px;
-
-    margin: 80px auto;
-    max-width: 1288px;
+    margin: 20px auto;
     width: 100%;
+    max-width: 1288px;
+  }
 
-    .info-mission {
-        width: 30%;
-
-        h2 {
-            color: $primary-color-two;
-        }
-
-        p {
-            font-size: .7em;
-        }
-    }
-}
-
-.cards-mission {
-    display: flex;
-    gap: 5%;
+  .card-mission {
+    background-color: #222;
+    border-radius: 25px;
+    padding: 15px;
+    width: 500px;
+    height: 450px;
     text-align: center;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #5b5b5b solid 1px;
 
-    width: 60%;
+
+    img {
+      width: 50%;
+      margin: auto;
+    }
 
     h3 {
-        font-size: 1em;
-        text-align: center;
+      font-size: 1em;
+      text-align: center;
     }
 
     p {
-        font-size: .7em;
+      font-size: 0.7em;
     }
+  }
+  .card-mission:hover {
+    box-shadow: 1px 1px 10px #ffffff47;
+    transform: scale(1.1);
+  }
 }
 
-@media screen and (max-width: 1312px) {
-    .mission {
-        flex-direction: column;
-        max-width: 800px;
-        width: 100%;
-        
-        
-        .info-mission {
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    .cards-mission {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .mission {
-        text-align: center;
-        background-image: none;
-        background-color: $black-normal;
-        border-radius: 0px;
-        margin-top: 80px;
-    }
-
-    .info-mission {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        p {
-            width: 85%;
-        }
-    }
-
-    .cards-mission {
-        flex-direction: column;
-
-        p {
-            max-width: 500px;
-        }
-    }
+@media screen and (max-width: 668px) {
+  .cards-mission {
+    flex-wrap: wrap;
 
     .card-mission {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      height: 200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 25px;
+      border: #5b5b5b solid 1px;
+
+      img {
+        width: 80px;
+      }
+      h3,
+      p {
+        text-align: left;
+      }
     }
+    .card-mission:hover {
+        transform: scale(1);
+      }
+  }
 }
