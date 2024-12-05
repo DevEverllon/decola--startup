@@ -982,6 +982,11 @@ footer {
 }
 .footer-culum1 div i {
   font-size: 20px;
+  color: #fff;
+  transition: 0.5s;
+}
+.footer-culum1 div i:hover {
+  color: #c2c2c2;
 }
 
 .footer-culum2 {
@@ -1211,6 +1216,53 @@ footer {
 /* Efeito ativo (ao clicar e segurar) */
 ::-webkit-scrollbar-thumb:active {
   background: linear-gradient(45deg, #00e0ff, #00ff85);
+}
+
+.policy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 25px;
+}
+.policy .policy-title {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.policy .policy-title-h2 {
+  color: #00ff85;
+  font-size: 1.3rem;
+  margin: 40px 0px 10px 0px;
+}
+.policy .policy-txt {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+.policy ul {
+  margin-bottom: 40px;
+}
+.policy li {
+  font-size: 0.9rem;
+  margin-left: 25px;
+  list-style: circle;
+  line-height: 1.5rem;
+}
+.policy a {
+  color: #00e0ff;
+}
+.policy .policy-btn-voltar {
+  position: fixed;
+  bottom: 630px;
+  right: 20px;
+  z-index: 99;
+  background-color: #00e0ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  width: 150px;
+  height: 50px;
 }
 
 html {
