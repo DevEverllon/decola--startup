@@ -7,7 +7,7 @@
   </head>
   <body>
     <footer>
-      <div class="footer-culum1">
+      <div class="footer-colum1">
         <img src="asserts/logo-decola-three.png" alt="Logo Decola Startup" />
 
         <div>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="footer-culum2">
+      <div class="footer-colum2">
         <div class="footer-card">
           <span>Links rápidos</span>
           <a href="#home">Home</a>
@@ -45,8 +45,8 @@
         <div class="footer-card">
           <span>Resources</span>
           <a href="faq.html">FAQs</a>
-          <a href="politic-privacy.html">Política de Privacidade</a>
-          <a href="politic-cookies.html" target="_parent">Termos de Cookies</a>
+          <a href="politic-privacy.html">Privacidade</a>
+          <a href="politic-cookies.html" target="_parent">Cookies</a>
           <a href="#">Documentação</a>
         </div>
 
@@ -72,7 +72,7 @@
 
           <form action="#" method="post">
             <fieldset class="card-form">
-              <legend>Formulário de Contato</legend>
+              <legend></legend>
 
               <label for="email">Email</label>
 
@@ -84,13 +84,22 @@
                 required
               />
 
-              <div class="politic">
-                <input type="checkbox" name="politic" id="politic" required />
+              <label for="duvida">Sua Pergunta</label>
 
-                <label for="politic"
-                  >Li e aceito os
-                  <a href="#">termos de política de privacidade</a></label
-                >
+              <textarea
+                name="txtQuestion"
+                id="txtQuestion"
+                required
+                placeholder="Digite sua dúvida"
+              ></textarea>
+
+              <div class="concord">
+                <div>
+                  <input type="checkbox" name="politic" id="politic" required />
+                  <label for="politic" px>Li e aceito</label>
+                </div>
+
+                <a href="politic-privacy.html">termos de política de privacidade</a>
               </div>
 
               <button type="submit">Enviar</button>
@@ -99,7 +108,7 @@
         </div>
       </div>
 
-      <div class="footer-culum3">
+      <div class="footer-colum3">
         <p>&copy;2024 Decola Startup. Todos os direitos reservados.</p>
       </div>
     </footer>

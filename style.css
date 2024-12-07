@@ -974,157 +974,196 @@ footer {
   padding: 25px 80px;
 }
 
-.footer-culum1 {
+.footer-colum1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 2px solid #fff;
 }
-.footer-culum1 div {
+.footer-colum1 div {
   display: flex;
   gap: 25px;
 }
-.footer-culum1 div i {
+.footer-colum1 div i {
   font-size: 20px;
   color: #fff;
   transition: 0.5s;
 }
-.footer-culum1 div i:hover {
-  color: #c2c2c2;
+.footer-colum1 div i:hover {
+  color: #c6c6c6;
 }
 
-.footer-culum2 {
+.footer-colum2 {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 25px;
   margin: 25px 0px;
   padding-bottom: 30px;
   border-bottom: 2px solid #fff;
 }
-.footer-culum2 .footer-card {
+.footer-colum2 .footer-card {
   display: flex;
   flex-flow: column;
   font-size: 0.7em;
   width: 20%;
 }
-.footer-culum2 .footer-card span {
+.footer-colum2 span {
   font-size: 0.7rem;
   font-weight: 600;
   color: #fff;
 }
-.footer-culum2 .footer-card a {
+.footer-colum2 a {
   color: #c2c2c2;
   margin-top: 25px;
 }
-.footer-culum2 .footer-form {
-  margin-left: 100px;
+.footer-colum2 a:hover {
+  color: #fff;
 }
-.footer-culum2 .footer-form span {
+.footer-colum2 .footer-form {
+  margin-left: 100px;
+  width: 100%;
+}
+.footer-colum2 .footer-form span {
   font-size: 0.7rem;
   font-weight: 600;
   color: #fff;
 }
-.footer-culum2 .footer-form .card-form {
+.footer-colum2 .footer-form .card-form {
+  display: flex;
+  flex-flow: column;
   background-color: #141823;
   padding: 20px;
   margin-top: 25px;
   border-radius: 20px;
 }
-.footer-culum2 .footer-form .card-form input {
-  background: transparent;
+.footer-colum2 .footer-form label {
+  font-size: 0.8rem;
   color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50px;
-  font-size: 11pt;
-  width: 100%;
-  margin-top: 10px;
-  padding: 15px;
-}
-.footer-culum2 .footer-form .card-form .politic {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  gap: 15px;
-}
-.footer-culum2 .footer-form .card-form .politic input[type=checkbox] {
-  width: auto;
-  cursor: pointer;
-  margin: 0px;
-}
-.footer-culum2 .footer-form .card-form .politic label {
-  font-size: 0.5rem;
-  color: #fff;
-  background-color: transparent;
   cursor: pointer;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
-.footer-culum2 .footer-form .card-form .politic label a {
-  color: #00e0ff;
+.footer-colum2 .footer-form input {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  font-size: 0.5rem;
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
 }
-.footer-culum2 .footer-form .card-form button {
+.footer-colum2 .footer-form textarea {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  font-size: 0.5rem;
+  font-family: "Sora", sans-serif;
+  margin-top: 10px;
+  padding: 15px;
+  width: 630px;
+  max-width: 630px;
+  height: 50px;
+  max-height: 100px;
+}
+.footer-colum2 .footer-form .concord {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+}
+.footer-colum2 .footer-form .concord input[type=checkbox] {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  margin: 0;
+}
+.footer-colum2 .footer-form .concord label {
+  display: inline-flex;
+  align-items: center;
+  color: #555;
+  line-height: 1.5;
+}
+.footer-colum2 .footer-form .concord a {
+  color: #00ff85;
+  margin: 0px;
+}
+.footer-colum2 .footer-form button {
   background-color: #00e0ff;
   border: none;
   border-radius: 50px;
+  font-weight: 700;
   padding: 8px 20px;
   cursor: pointer;
+  margin-top: 25px;
+  width: 20%;
 }
 
-.footer-culum3 {
-  font-size: 12pt;
+.footer-colum3 p {
+  font-size: 1rem;
 }
 
-@media screen and (max-width: 1213px) {
-  .footer-culum2 {
+@media screen and (max-width: 1271px) {
+  .footer-colum2 {
     flex-wrap: wrap;
   }
-  .footer-culum2 .footer-form {
+  .footer-colum2 .footer-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer-colum2 textarea {
     width: 100%;
   }
-  .footer-culum3 {
+  .footer-colum3 {
     text-align: center;
-  }
-  .footer-culum2 .footer-form .card-form .politc {
-    justify-content: space-around;
   }
 }
 @media screen and (max-width: 594px) {
   footer {
     flex-direction: column;
     width: 100%;
-    padding: 25px 20px;
+    padding: 20px;
   }
-  .footer-culum1 {
+  .footer-colum2 {
     flex-direction: column;
+    gap: 15px;
   }
-  .footer-culum2 {
-    flex-direction: column;
+  .footer-colum2 .footer-card {
     width: 100%;
   }
-  .footer-culum2 .politc {
-    flex-wrap: wrap;
+  .footer-colum2 a {
+    margin-top: 10px;
+    margin-left: 10px;
   }
-  .footer-culum2 .footer-card {
+  .footer-colum2 .concord {
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .footer-colum2 .footer-form {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+  }
+  .footer-colum2 .footer-form textarea {
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+  }
+  .footer-colum2 .footer-form button {
     width: 100%;
   }
-  .footer-culum2 .footer-card a {
-    margin-top: 5px;
-    margin-left: 15px;
+  .footer-colum3 {
+    text-align: center;
   }
-  .footer-culum2 .politc div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-culum2 .footer-form {
-    margin-left: 1px;
-  }
-  .footer-culum3 p {
-    font-size: 0.7rem;
+  .footer-colum3 p {
+    font-size: 0.8rem;
   }
 }
 /* Estilos para o botão flutuante */
@@ -1192,6 +1231,12 @@ footer {
 .cookies-msg .cookies-btn:hover {
   transform: scale(0.9);
   background-color: #00cc6a;
+}
+.cookies-msg a {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #00ff85;
+  transition: 2s;
 }
 
 /* Estiliza a barra de rolagem */
