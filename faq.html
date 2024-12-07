@@ -33,9 +33,46 @@
 
     <!-- SASS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- IMPORT ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
 
   <body>
+    <header>
+      <img
+        src="asserts/logo-one_decola.png"
+        alt="Logo Decola Startup"
+        class="logo-menu"
+      />
+
+      <div class="cart-menu">
+        <ul class="link-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="politic-privacy.html">Política de Privacidade</a></li>
+          <li><a href="politic-cookies.html">Termos de Cookies</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Ajudas</a></li>
+        </ul>
+      </div>
+
+      <div class="btn-menu">
+        <button class="policy-btn-voltar" style="color: #fff;">
+          Voltar
+        </button>
+      </div>
+
+      <!-- BOTÃO PARA MENU MOBILE  -->
+      <div class="menu-mobile">
+        <button>
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </header>
+
     <section id="faq" class="faq">
       <h2>Perguntas Frequêntes</h2>
 
@@ -214,6 +251,7 @@
     <!-- O FOOTER É VIA JAVASCRIPT -->
     <div id="footer"></div>
 
-    <script src="footter.js"></script>
+    <script src="faq.js"></script>
+    <script src="footer.js"></script>
   </body>
 </html>
