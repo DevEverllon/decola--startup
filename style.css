@@ -878,12 +878,17 @@ header {
   bottom: 95px;
   right: -3px;
   z-index: 99;
-  background-color: #999999;
+  background-color: rgba(48, 48, 48, 0.3960784314);
   border: none;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 10px 0px 0px 10px;
   padding: 13px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  width: 45px;
+}
+#btnTop .bi-arrow-up-circle {
+  color: #fff;
+  width: 100%;
 }
 
 #btnTop:hover {

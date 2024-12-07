@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (footerContainer) {
       const xhr = new XMLHttpRequest();
-      xhr.open("GET", "foottter.html", true);
+      xhr.open("GET", "footer.html", true);
       xhr.onload = function () {
         if (xhr.status === 200) {
           footerContainer.innerHTML = xhr.responseText;
