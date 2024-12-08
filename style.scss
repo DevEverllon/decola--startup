@@ -8,22 +8,23 @@
 }
 
 // IMPORTAÇÕES DE ARQUIVOS
-@import "partials/color";
-@import "partials/header";
-@import "partials/home";
-@import "partials/carrossel";
-@import "partials/services";
-@import "partials/portifolio";
-@import "partials/planes";
-@import "partials/faq";
-@import "partials/contact";
-@import "partials/btn-top";
-@import "partials/mission";
-@import "partials/footer";
-@import "partials/btn-wpp";
-@import "partials/cookies";
-@import "partials/barra-scroll";
-@import "partials/policy.scss";
+@import "../_scss/color";
+@import "../_scss/";
+@import "../_scss//header";
+@import "../_scss//home";
+@import "../_scss//carrossel";
+@import "../_scss//services";
+@import "../_scss//portifolio";
+@import "asserts/_scss/planes";
+@import "../_scss//faq";
+@import "../_scss//contact";
+@import "../_scss//btn-top";
+@import "../_scss//mission";
+@import "../_scss//footer";
+@import "../_scss//btn-wpp";
+@import "../_scss//cookies";
+@import "../_scss//barra-scroll";
+@import "../_scss//policy.scss";
 
 html {
     scroll-behavior: smooth;

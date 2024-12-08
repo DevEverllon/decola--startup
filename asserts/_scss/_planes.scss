@@ -4,7 +4,7 @@
     align-items: start;
     justify-content: space-between;
     gap: 50px;
-
+    
     margin: 50px auto;
     max-width: 1288px;
 
@@ -19,16 +19,16 @@
     top: 0;
     z-index: 1;
     padding-top: 25px;
-
+    
     h2 {
         font-size: 32pt;
         font-weight: 600;
-
+        
         span {
             font-weight: 500;
         }
     }
-
+    
     p {
         font-size: 12pt;
         line-height: 1.5em;
@@ -38,7 +38,6 @@
 
     button {
         background-color: transparent;
-        color: $white-normal;
         font-size: 12pt;
 
         border: 2px solid $primary-color-one;
